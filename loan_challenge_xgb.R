@@ -106,7 +106,7 @@ summary(data_clean)
 
 #bad rate
 sum(data_clean$bad)/count(data_clean)
-#0.08894
+##0.08894
 
 #-----------------------------------------------#
 data_test <- select(data_clean, mths_since_last_delinq, mths_since_last_major_derog, mths_since_recent_bc_dlq, mths_since_recent_revol_delinq, bad)
