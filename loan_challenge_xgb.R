@@ -26,7 +26,7 @@ library(chron)
 library(e1071)
 
 #load CSV file
-dataset_path <- here("LoanStats_2018Q1_ds.csv")
+dataset_path <- here::here("LoanStats_2018Q1_ds.csv")
 data <- read.csv(dataset_path)
 
 #check the class of data frame
@@ -39,7 +39,7 @@ dim(data)
 summary(data)
 
 #save summary output
-summary_path <- here("loan_data_summary.txt")
+summary_path <- here::here("loan_data_summary.txt")
 sink(summary_path)
 print(summary(data))
 sink() 

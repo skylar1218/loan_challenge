@@ -21,7 +21,7 @@ library(caTools)
 library(scorecard)
 
 #load CSV file
-dataset_path <- here("LoanStats_2018Q1_ds.csv")
+dataset_path <- here::here("LoanStats_2018Q1_ds.csv")
 data <- read.csv(dataset_path)
 
 #create variable
@@ -63,7 +63,7 @@ plotlist = woebin_plot(bins)
 for (i in 1:length(plotlist)) {
   ggplot2::ggsave(paste0(names(plotlist[i]), ".png"), 
                   plotlist[[i]], 
-                  path = here("binning_plots/"),
+                  path = here::here("binning_plots/"),
                   width = 15, 
                   height = 9, 
                   units="cm" )
