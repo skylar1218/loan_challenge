@@ -132,7 +132,8 @@ summary(m2)
 
 # score
 card = scorecard(bins_adj, m2)
-sink("scorecard summary.txt")
+summary_path <- here::here("scorecard_summary.txt")
+sink(summary_path)
 print(card)
 sink()
 
