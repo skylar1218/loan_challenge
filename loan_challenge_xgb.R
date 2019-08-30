@@ -2,10 +2,8 @@
 #https://www.hackerearth.com/practice/machine-learning/machine-learning-algorithms/beginners-tutorial-on-xgboost-parameter-tuning-r/tutorial/
 #http://proceedings.mlr.press/v42/chen14.pdf
 
-#set directory
-setwd("C:/Users/QUANH3/OneDrive - The Toronto-Dominion Bank/Desktop")
-
 #install all package
+install.packages("here")
 install.packages("readr")
 install.packages("plyr")
 install.packages("lubridate")
@@ -19,6 +17,7 @@ install.packages("e1071")
 install.packages("caret")
 install.packages("mlr")
 
+library(here)
 library(readr)
 library(plyr)
 library(dplyr)
@@ -26,8 +25,9 @@ library(tidyverse)
 library(chron)
 library(e1071)
 
-#load CSV file; change the file name accordingly
-data <- read.csv('LoanStats_2018Q1_ds.csv')
+#load CSV file
+dataset_path <- here("LoanStats_2018Q1_ds.csv")
+data <- read.csv(dataset_path)
 
 #check the class of data frame
 class(data)
@@ -39,7 +39,8 @@ dim(data)
 summary(data)
 
 #save summary output
-sink("Loan Data Summary.txt")
+summary_path <- here("loan_data_summary.txt")
+sink(summary_path)
 print(summary(data))
 sink() 
 

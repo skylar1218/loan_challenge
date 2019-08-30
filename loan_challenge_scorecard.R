@@ -1,10 +1,8 @@
 #https://www.rdocumentation.org/packages/scorecard/versions/0.1.4
 #https://www.r-pkg.org/pkg/scorecard
 
-#set directory
-setwd("C:/Users/QUANH3/OneDrive - The Toronto-Dominion Bank/Desktop")
-
 #install all package
+install.packages("here")
 install.packages("readr")
 install.packages("plyr")
 install.packages("lubridate")
@@ -13,6 +11,7 @@ install.packages("chron")
 install.packages("caTools")
 install.packages("scorecard")
 
+library(here)
 library(readr)
 library(plyr)
 library(lubridate)
@@ -21,8 +20,9 @@ library(chron)
 library(caTools)
 library(scorecard)
 
-#load CSV file; change the file name accordingly
-data <- read.csv('LoanStats_2018Q1_ds.csv')
+#load CSV file
+dataset_path <- here("LoanStats_2018Q1_ds.csv")
+data <- read.csv(dataset_path)
 
 #create variable
 mondf <- function(d1, d2) {
@@ -63,7 +63,7 @@ plotlist = woebin_plot(bins)
 for (i in 1:length(plotlist)) {
   ggplot2::ggsave(paste0(names(plotlist[i]), ".png"), 
                   plotlist[[i]], 
-                  path = "C:/Users/QUANH3/OneDrive - The Toronto-Dominion Bank/Desktop/RStudio Plots", #change path accordingly
+                  path = here("binning_plots/"),
                   width = 15, 
                   height = 9, 
                   units="cm" )
