@@ -9,3 +9,7 @@ This repo contains the R code that is used to identify bad loans from the includ
 2. Ensure a personal library is set up
 3. Run the R file
 
+## Presentation
+
+The presentation can be downloaded [here](./presentation.pptx). This presentation demonstrates the work that was done and the results for this challenge.
+
