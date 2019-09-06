@@ -11,5 +11,5 @@ This repo contains the R code that is used to identify bad loans from the includ
 
 ## Presentation
 
-The presentation can be downloaded [here](./presentation.pptx). This presentation demonstrates the work that was done and the results for this challenge.
+The presentation can be downloaded [here](https://github.com/skylar1218/loan_challenge/raw/master/presentation.pptx). This presentation demonstrates the work that was done and the results for this challenge.
 
